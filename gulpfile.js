@@ -15,6 +15,7 @@ gulp.task('style', function () {
 gulp.task('watch', function() {
   gulp.watch('./src/scss/main.scss', gulp.series('style'));
   gulp.watch('./src/scss/components/*', gulp.series('style'));
+  gulp.watch('./src/scss/core/*', gulp.series('style'));
 });
 
 // Default task
