@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------ *\
+	Slider gallery
+\* ------------------------------------------------------------ */
+
+.slider-gallery {
+    .slider__slide img {
+        aspect-ratio: 80/100;
+        object-fit: cover;
+        box-shadow: 5px 5px 10px rgba($c-black, .6);
+    }
+
+    .slider__pagination-bullet {
+        background: $c-white;
+        width: 35px;
+        height: 6px;
+        border-radius: 99em;
+        transition: width $t-duration;
+        opacity: .5;
+    }
+
+    .slider__pagination-bullet-active {
+        width: 60px;
+        opacity: 1;
+    }
+}

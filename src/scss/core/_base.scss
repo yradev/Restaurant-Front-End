@@ -22,7 +22,7 @@ body {
 	font-smoothing: antialiased;
 	text-size-adjust: none;
 	min-width: 320px;
-	background: #c9c7c7;
+	background: $c-white;
 	font-family: $ff-serif;
 	font-weight: $font-weight-base;
 	font-size: $font-size-base;
@@ -47,7 +47,7 @@ h1 {
 }
 
 h2 {
-	font-size: 29px;
+	font-size: 54px;
 }
 
 h3 {

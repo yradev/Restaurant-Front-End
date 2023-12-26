@@ -12,7 +12,7 @@ export default function Intro() {
                         </div>
 
                         <div className="section__body">
-                            <p>Еnjoy your favorite dishes</p>
+                            <p>Favorite dishes</p>
                         </div>
                     </div>
 
@@ -32,7 +32,7 @@ export default function Intro() {
                         </div>
 
                         <div className="section__body">
-                            <p>Reservations for events</p>
+                            <p>Reservations</p>
                         </div>
                     </div>
                 </div>
