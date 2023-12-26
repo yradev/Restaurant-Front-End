@@ -1,0 +1,60 @@
+/* ------------------------------------------------------------ *\
+	Section intro
+\* ------------------------------------------------------------ */
+
+.section-intro {
+    margin-top: -110px;
+    position: relative;
+    z-index: 3;
+
+    .section__inner {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: $c-white;
+        padding: 30px 40px;
+        border-radius: 25px;
+        box-shadow: 10px 10px 10px rgba($c-black, .4);
+    }
+
+    .section__col {
+        width: 33.33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section__head {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -15px;
+            width: 100%;
+            height: 2px;
+            background-color: rgba($c-black, .2);
+        }
+    }
+
+    .section__head svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .section__body {
+        font-size: 22px;
+        font-weight: 600;
+        text-align: center;
+        padding: 0 20px;
+    }
+}

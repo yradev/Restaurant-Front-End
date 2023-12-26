@@ -1,19 +1,25 @@
+import { useState } from 'react';
 import Router from './Router';
+import Header from './components/fragments/Header';
 
 function App() {
-  return (
-    <div className="Wrapper">
-    	<header class="header">
-    		
-    	</header>
+	const [headerTransperant, setHeaderTransperant] = useState(false);
 
-    	<div class="main">
-    		<Router />
-    	</div>
+	return (
+		<div className="Wrapper">
+			{/* <Header headerTransperant={headerTransperant} /> */}
 
-    	<footer class="footer"></footer>
-    </div>
-  );
+			<div className="main">
+				<Router />
+			</div>
+
+			<footer className="footer">
+			</footer>
+		</div>
+	);
 }
 
 export default App;
+
+
+

@@ -1,0 +1,21 @@
+
+/* ------------------------------------------------------------ *\
+	Shell
+\* ------------------------------------------------------------ */
+
+.shell {
+	max-width: $shell-max-width + $shell-padding * 2;
+	padding-inline: $shell-padding;
+	margin: 0 auto;
+	width: 100%;
+
+	@include breakpoint-down(mobile) {
+		padding-inline: $shell-padding-mobile;
+	}
+}
+
+/* Shell Fluid */
+
+.shell--fluid {
+	max-width: none;
+}

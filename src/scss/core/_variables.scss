@@ -1,0 +1,28 @@
+$font-size-base             : 16px;
+$font-weight-base           : 400;
+$line-height-base           : 1.5;
+
+$ff-sans-serif              : 'Roboto', Helvetica, Arial, sans-serif;
+$ff-serif                   :'Lora', Georgia, 'Times New Roman', Times, serif;
+
+$t-duration                 : 0.4s;
+
+$shell-max-width            : 1650px;
+$shell-padding              : 50px;
+$shell-padding-mobile       : 25px;
+
+$c-black                    : #000;
+$c-white                    : #fff;
+$c-light					: #e7d6d6;
+$c-orange					: #eb9e10;
+$c-silver					: #c0c0c0;
+
+$breakpoints: (
+	mobile-small: 374px,
+	mobile-medium: 575px,
+	mobile: 767px,
+	admin-bar: 782px,
+	tablet: 1023px,
+	small-desktop: 1199px,
+	large-desktop: 1399px
+);

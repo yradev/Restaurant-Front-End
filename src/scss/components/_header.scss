@@ -1,0 +1,33 @@
+/* ------------------------------------------------------------ *\
+	Header
+\* ------------------------------------------------------------ */
+
+.header {
+	background-color: $c-black;
+	color: $c-white;
+	padding: 20px 0;
+	position: fixed;
+	width: 100%;
+	.header__inner {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		flex-wrap: wrap;
+	}
+
+	.header__container {
+		width: 2%;
+		display: flex;
+	};
+
+	.header__nav {
+		display: flex;
+		flex-grow: 1;
+		justify-content: space-between;
+	}
+}
+
+/*  Transperant  */
+.header--transperant {
+	background-color: transparent;
+}
