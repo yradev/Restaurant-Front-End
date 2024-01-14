@@ -1,0 +1,62 @@
+/* ------------------------------------------------------------ *\
+	Nav utilities
+\* ------------------------------------------------------------ */
+
+.nav-utilities {
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    a {
+        transition: opacity $t-duration;
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+
+    ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    ul li a {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+    }
+
+    .nav__dropdown-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    ul li {
+        position: relative;
+    }
+
+    ul li .dropdown {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity $t-duration, translate $t-duration;
+        background-color: #fff;
+        color: $c-black;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 300px;
+        padding: 20px;
+        border-radius: 0 0 20px 20px;
+        transition: opacity $t-duration, top $t-duration, left $t-duration;
+    }
+
+    ul li.is-active .dropdown {
+        opacity: 1;
+        top: 40px;
+        pointer-events: auto;
+    }
+
+    ul li.is-active .dropdown--left {
+        left: -50px;
+        border-radius: 0 0 0 20px;
+    }
+}

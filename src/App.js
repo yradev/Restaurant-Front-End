@@ -7,7 +7,7 @@ function App() {
 
 	return (
 		<div className="Wrapper">
-			{/* <Header headerTransperant={headerTransperant} /> */}
+			<Header />
 
 			<div className="main">
 				<Router />

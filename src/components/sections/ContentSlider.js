@@ -1,7 +1,7 @@
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-export default function ContentSlider({ content, title, images }) {
+export default function ContentSlider({ content, title, images, reversed }) {
     const sliderOptions = {
         effect: "coverflow",
         grabCursor: true,
@@ -47,7 +47,7 @@ export default function ContentSlider({ content, title, images }) {
         wrapperClass: "slider__toogle"
     }
     return (
-        <div className="section-content-slider">
+        <div className={`section-content-slider ${reversed ? 'section-content-slider--reversed' : ''}`}>
             <div className="shell">
                 <div className="section__inner">
                     <div className="section__content">

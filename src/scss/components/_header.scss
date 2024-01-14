@@ -3,11 +3,14 @@
 \* ------------------------------------------------------------ */
 
 .header {
-	background-color: $c-black;
-	color: $c-white;
-	padding: 20px 0;
+	background-color: $c-white;
+	color: $c-black;
+	padding: 15px 0;
 	position: fixed;
 	width: 100%;
+	z-index: 999;
+	transition: opacity $t-duration, transform $t-duration;
+
 	.header__inner {
 		display: flex;
 		align-items: center;
@@ -18,16 +21,58 @@
 	.header__container {
 		width: 2%;
 		display: flex;
-	};
+	}
+
+	;
 
 	.header__nav {
 		display: flex;
 		flex-grow: 1;
 		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header__language {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 15px;
+		width: 20px;
+	}
+
+	.header__language a {
+		display: flex;
+		gap: 2px;
+	}
+
+	.header__language svg {
+		width: 100%;
+		object-fit: contain;
+	}
+
+	.header__language .dropdown {
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity $t-duration, translate $t-duration;
+		background-color: #fff;
+		color: $c-black;
+		position: absolute;
+		top: 20px;
+		left: 0;
+		width: 300px;
+		padding: 20px;
+		border-radius: 0 0 20px 20px;
+		transition: opacity $t-duration, top $t-duration, left $t-duration;
+	}
+
+	.header__language.is-active .dropdown {
+		opacity: 1;
+		top: 40px;
+		pointer-events: auto;
 	}
 }
 
-/*  Transperant  */
-.header--transperant {
-	background-color: transparent;
+.header.is-hidden {
+	opacity: 0;
+	transform: translateY(-100%);
 }

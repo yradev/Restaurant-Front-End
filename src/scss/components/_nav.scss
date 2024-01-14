@@ -6,6 +6,14 @@
 	font-weight: 500;
 	letter-spacing: 1px;
 
+	a {
+		transition: opacity $t-duration;
+
+		&:hover {
+			opacity: .6;
+		}
+	}
+
 	ul {
 		display: flex;
 		gap: 10px;

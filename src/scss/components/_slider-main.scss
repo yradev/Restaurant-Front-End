@@ -1,0 +1,45 @@
+/* ------------------------------------------------------------ *\
+	Slider Main Background
+\* ------------------------------------------------------------ */
+
+.slider-main {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	filter: blur(2px);
+	z-index: -1;
+	
+	img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.swiper-slide-active>img {
+		animation: zoom-out 10s linear;
+	}
+
+	.slider__clip {
+		height: 100%;
+	}
+
+	.slider__pagination {
+		text-align: left;
+		bottom: 50px !important;
+	}
+
+	.slider__pagination-bullet {
+		background: $c-white;
+		width: 35px;
+		height: 6px;
+		border-radius: 99em;
+		transition: width $t-duration;
+		opacity: .5;
+	}
+
+	.slider__pagination-bullet-active {
+		width: 60px;
+		opacity: 1;
+	}
+}

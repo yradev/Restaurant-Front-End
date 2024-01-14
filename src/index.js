@@ -3,17 +3,38 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import i18next from 'i18next';
+import HttpApi from 'i18next-http-backend'
+import LanguageDetector from 'i18next-browser-languagedetector';
+import { initReactI18next } from 'react-i18next';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-	  <BrowserRouter>
-	      <App />
-	  </BrowserRouter>
-  </React.StrictMode>
-);
+(async () => {
+	await i18next
+		.use(initReactI18next)
+		.use(LanguageDetector)
+		.use(HttpApi)
+		.init({
+			supportedLanguages: ['en', 'bg'],
+			detection: {
+				order: ['localStorage', 'htmlTag'],
+				caches: ['localStorage'],
+			},
+			backend: {
+				loadPath: '/languages/{{lng}}/Language.json',
+			}
+		});
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+	const root = ReactDOM.createRoot(document.getElementById('root'));
+	root.render(
+		<React.StrictMode>
+			<BrowserRouter>
+				<App />
+			</BrowserRouter>
+		</React.StrictMode>
+	);
+
+	// If you want to start measuring performance in your app, pass a function
+	// to log results (for example: reportWebVitals(console.log))
+	// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+	reportWebVitals();
+})();

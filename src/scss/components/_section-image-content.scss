@@ -1,8 +1,8 @@
 /* ------------------------------------------------------------ *\
-	Section content slider
+	Section image content
 \* ------------------------------------------------------------ */
 
-.section-content-slider {
+.section-image-content {
     margin: 80px 0;
 
     .section__inner {
@@ -10,26 +10,15 @@
         flex-wrap: wrap;
     }
 
+    .section__image {
+        width: 50%;
+    }
+
     .section__content {
-        width: 40%;
-        padding-right: 40px;
+        width: 50%;
+        padding-left: 60px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-
-    .section__slider {
-        width: 60%;
-    }
-}
-
-/* Section content slider reversed */
-.section-content-slider--reversed {
-    .section__inner {
-        flex-direction: row-reverse;
-    }
-
-    .section__content {
-        padding-left: 40px;
     }
 }
