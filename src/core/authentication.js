@@ -3,7 +3,6 @@ import { getAuthDetails } from "./storage";
 
 export async function updateRoles() {
     const roles = await get("/user");
-    console.log(roles.roles);
     return roles.roles.map(a => Object.values(a)[0].substring(5));
 
 }

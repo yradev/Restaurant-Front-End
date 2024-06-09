@@ -126,7 +126,7 @@ export const ModalsContext = createContext({
 export const CoreContext = createContext({
     updateState(data) { },
     async update() {
-        const result = await get('/');
+        const result = await get('/core');
         this.updateState({ ...this, ...result });
     }
 });

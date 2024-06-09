@@ -35,7 +35,7 @@ async function request(path, method, body) {
 
     if (authDetails !== null) {
         if ( authDetails.token !== undefined && authDetails.token !== null) {
-            options.headers['Authorization'] = 'Bearer ' + authDetails.token;
+            options.headers['Authentication'] =  authDetails.token;
         }
     }
 
